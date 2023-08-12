@@ -23,7 +23,7 @@ export default function Home() {
                 <h1 className={"text-center text-7xl font-medium"}>Join us in the fight for the environment</h1>
             </section>
 
-            <section className={"flex flex-row gap-12 items-center justify-center py-8 px-8"}>
+            <section className={"flex flex-col md:flex-row gap-12 items-center justify-center py-8 px-8"}>
                 <div className={"bg-green-300 w-32 h-32 rounded-3xl"}>
 
                 </div>
@@ -66,7 +66,7 @@ export default function Home() {
                 <span className={"text-green-950 font-medium"}>Green The Planet</span>
             </section>
 
-            <section className={"flex flex-row justify-between gap-24 items-start px-20 py-12"}>
+            <section className={"flex flex-col md:flex-row justify-between gap-24 items-start px-20 py-12"}>
                 <div className={"flex flex-1"}>
                     <p className={"font-thin text-lg"}>The GreenWorld has carried out many successful project for reforestation and biodiversity
                         conservation.</p>
@@ -90,7 +90,7 @@ export default function Home() {
                 <h2 className={"text-5xl font-medium"}>We hold various events, campaigns and raise funds for the implementation of projects to preserve the environment</h2>
             </section>
 
-            <section className={"flex flex-row flex-nowrap overflow-hidden gap-4 px-16 pb-12"}>
+            <section className={"flex flex-col md:flex-row flex-nowrap overflow-hidden gap-4 px-16 pb-12"}>
                 <div className={"flex flex-row w-[36rem] gap-8 h-64 rounded-3xl bg-gray-200 p-6"}>
                     <div className={"flex flex-col justify-between"}>
                         <div>
