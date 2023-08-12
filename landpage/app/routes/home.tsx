@@ -142,6 +142,41 @@ export default function Home() {
                         <span className={"font-medium"}>Read more</span>
                     </div>
                 </article>
+
+                <article className={"flex flex-row flex-nowrap whitespace-nowrap justify-between items-center gap-8 px-8 overflow-y-hidden overflow-x-hidden py-8"}>
+                    <span className={"text-8xl font-medium uppercase tracking-tighter"}>Green</span>
+                    <div className={"flex bg-green-400 rounded-full min-w-[10rem] min-h-[10rem]"}></div>
+                    <span className={"text-8xl font-medium uppercase tracking-tighter"}>Campaign</span>
+                </article>
+
+                <article>
+                    <span>Get Involved</span>
+                    <p>Information on the various way in which visitor can contribute to the work of The GreenWorld</p>
+                </article>
+
+                <article>
+                    <div>
+                        <h3>You can become a volunteer</h3>
+                    </div>
+
+                    <div>
+                        <h3>You can share information</h3>
+                    </div>
+
+                    <div>
+                        <h3>You can make a donation</h3>
+                    </div>
+
+                    <div>
+                        <h3>You can participate in campaigns</h3>
+                    </div>
+                </article>
+
+                <article>
+                    <span>Our Gallery</span>
+
+                    <h1>Evaluate your results by browsing the gallery</h1>
+                </article>
             </section>
         </>
     )
