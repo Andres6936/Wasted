@@ -66,16 +66,19 @@ export default function Home() {
                 <span className={"text-green-950 font-medium"}>Green The Planet</span>
             </section>
 
-            <section className={"flex flex-row"}>
-                <div>
-                    <p>The GreenWorld has carried out many successful project for reforestation and biodiversity
+            <section className={"flex flex-row justify-between gap-24 items-start px-20 py-12"}>
+                <div className={"flex flex-1"}>
+                    <p className={"font-thin text-lg"}>The GreenWorld has carried out many successful project for reforestation and biodiversity
                         conservation.</p>
                 </div>
 
-                <div>
-                    <h2>We strive to project nature for future generations.</h2>
-                    <button>About us</button>
-                    <button>View Campaigns</button>
+                <div className={"flex flex-[2] flex-col"}>
+                    <h2 className={"text-4xl font-medium"}>We strive to project nature for future generations.</h2>
+
+                    <div className={"flex flex-row mt-8"}>
+                        <button className={"flex rounded-3xl bg-green-200 py-1 px-12 justify-center text-center"}>About us</button>
+                        <button className={"flex rounded-3xl py-1 px-12 justify-center text-center"}>View Campaigns</button>
+                    </div>
                 </div>
             </section>
 
