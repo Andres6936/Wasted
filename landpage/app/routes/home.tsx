@@ -30,7 +30,7 @@ export default function Home() {
                         environment</h1>
                 </article>
 
-                <article className={"flex flex-col md:flex-row gap-12 items-center justify-center py-8 px-8"}>
+                <article className={"flex flex-col md:flex-row gap-4 items-center justify-center py-8 px-8"}>
                     <div className={"bg-green-300 w-32 h-32 rounded-3xl"}>
 
                     </div>
@@ -77,7 +77,7 @@ export default function Home() {
             </section>
 
             <section className={"flex flex-col container mx-auto"}>
-                <article className={"flex flex-col md:flex-row justify-between gap-24 items-start px-8 md:px-20 py-12"}>
+                <article className={"flex flex-col md:flex-row justify-between gap-24 items-start px-8 py-12"}>
                     <div className={"flex flex-1"}>
                         <p className={"font-thin text-lg"}>The GreenWorld has carried out many successful project for
                             reforestation and biodiversity
@@ -99,16 +99,16 @@ export default function Home() {
                     </div>
                 </article>
 
-                <article className={"flex pl-8 md:pl-16"}>
+                <article className={"flex pl-8"}>
                     <button className={"border-2 border-gray-600 rounded-3xl px-8 py-3"}>Our Projects</button>
                 </article>
 
-                <article className={"flex pl-8 md:pl-16 pr-48 py-12"}>
+                <article className={"flex pl-8 pr-48 py-12"}>
                     <h2 className={"text-5xl font-medium"}>We hold various events, campaigns and raise funds for the
                         implementation of projects to preserve the environment</h2>
                 </article>
 
-                <article className={"flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 px-8 md:px-16 pb-12"}>
+                <article className={"flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 px-8 pb-12"}>
                     <div className={"flex flex-col md:flex-row md:w-[36rem] md:h-64 gap-8 rounded-3xl bg-gray-200 p-6"}>
                         <div className={"flex flex-col justify-between"}>
                             <div>
