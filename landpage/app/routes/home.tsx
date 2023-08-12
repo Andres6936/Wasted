@@ -19,7 +19,7 @@ export default function Home() {
                 <span className={"flex flex-auto font-medium justify-end"}>Contact us</span>
             </section>
 
-            <section className={"flex justify-center items-center"}>
+            <section className={"flex justify-center items-center py-8"}>
                 <h1 className={"text-center text-7xl font-medium"}>Join us in the fight for the environment</h1>
             </section>
 
