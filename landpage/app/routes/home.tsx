@@ -149,33 +149,35 @@ export default function Home() {
                     <span className={"text-8xl font-medium uppercase tracking-tighter"}>Campaign</span>
                 </article>
 
-                <article>
-                    <span>Get Involved</span>
-                    <p>Information on the various way in which visitor can contribute to the work of The GreenWorld</p>
+                <article className={"flex flex-row justify-between items-center gap-24 px-8 my-6"}>
+                    <span className={"text-4xl font-medium"}>Get Involved</span>
+                    <p className={"max-w-sm leading-4"}>Information on the various way in which visitor can contribute to the work of The GreenWorld</p>
                 </article>
 
-                <article>
-                    <div>
-                        <h3>You can become a volunteer</h3>
+                <article className={"flex flex-col px-8 gap-4"}>
+                    <div className={"rounded-3xl bg-gray-200 px-8 py-4"}>
+                        <h3 className={"font-medium text-2xl mb-4"}>You can become a volunteer</h3>
                     </div>
 
-                    <div>
-                        <h3>You can share information</h3>
+                    <div className={"rounded-3xl bg-green-300 px-8 py-4"}>
+                        <h3 className={"font-medium text-2xl mb-4"}>You can share information</h3>
                     </div>
 
-                    <div>
-                        <h3>You can make a donation</h3>
+                    <div className={"rounded-3xl bg-gray-200 px-8 py-4"}>
+                        <h3 className={"font-medium text-2xl mb-4"}>You can make a donation</h3>
                     </div>
 
-                    <div>
-                        <h3>You can participate in campaigns</h3>
+                    <div className={"rounded-3xl bg-gray-200 px-8 py-4"}>
+                        <h3 className={"font-medium text-2xl mb-4"}>You can participate in campaigns</h3>
                     </div>
                 </article>
 
-                <article>
-                    <span>Our Gallery</span>
+                <article className={"flex flex-col justify-center items-center px-8 py-8 my-12"}>
+                    <button className={"max-w-[12rem] border-2 border-gray-600 rounded-3xl px-8 py-3"}>Our Gallery</button>
 
-                    <h1>Evaluate your results by browsing the gallery</h1>
+                    <h1 className={"mb-16 mt-24 text-4xl font-medium"}>Evaluate your results by browsing the gallery</h1>
+
+                    <div className={"min-w-[38rem] min-h-[16rem] rounded-full bg-green-400"}></div>
                 </article>
             </section>
         </>
