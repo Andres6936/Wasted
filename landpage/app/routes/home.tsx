@@ -82,8 +82,8 @@ export default function Home() {
                 </div>
             </section>
 
-            <section>
-                <button>Our Projects</button>
+            <section className={"flex pl-16"}>
+                <button className={"border-2 border-gray-600 rounded-3xl px-8 py-3"}>Our Projects</button>
             </section>
 
             <section className={"flex pl-16 pr-48 py-12"}>
