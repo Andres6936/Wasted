@@ -110,9 +110,9 @@ export default function Home() {
                     <button className={"border-2 border-gray-600 rounded-3xl px-8 py-3"}>Our Projects</button>
                 </article>
 
-                <article className={"flex pl-8 pr-48 py-12"}>
-                    <h2 className={"text-5xl font-medium"}>We hold various events, campaigns and raise funds for the
-                        implementation of projects to preserve the environment</h2>
+                <article className={"flex px-8 md:pl-8 md:pr-48 py-12"}>
+                    <h2 className={"text-4xl md:text-5xl font-medium leading-[1.2] md:leading-[1.2]"}>We hold various events, campaigns and raise funds for the
+                        implementation of projects to preserve <span className={"bg-green-200 rounded-3xl py-0 px-1 whitespace-nowrap"}>the environment</span></h2>
                 </article>
 
                 <article className={"flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 px-8 pb-12"}>
