@@ -106,12 +106,12 @@ export default function Home() {
                         implementation of projects to preserve the environment</h2>
                 </article>
 
-                <article className={"flex flex-col md:flex-row flex-nowrap overflow-hidden gap-4 px-8 md:px-16 pb-12"}>
-                    <div className={"flex flex-row w-[36rem] gap-8 h-64 rounded-3xl bg-gray-200 p-6"}>
+                <article className={"flex flex-col md:flex-row md:flex-nowrap overflow-hidden gap-4 px-8 md:px-16 pb-12"}>
+                    <div className={"flex flex-col md:flex-row md:w-[36rem] md:h-64 gap-8 rounded-3xl bg-gray-200 p-6"}>
                         <div className={"flex flex-col justify-between"}>
                             <div>
                                 <h4 className={"text-3xl font-medium"}>Cleaning up the Danube</h4>
-                                <p className={"text-sm py-4 pr-32"}>Our team is actively working to clean up the Danube
+                                <p className={"text-sm py-4 pr-12 md:pr-32"}>Our team is actively working to clean up the Danube
                                     River from pollution in order to restore its natural beauty.</p>
                             </div>
 
@@ -121,13 +121,13 @@ export default function Home() {
                         <div className={"flex w-80 rounded-3xl bg-green-400"}></div>
                     </div>
 
-                    <div className={"flex flex-col justify-between w-64 h-64 rounded-3xl bg-green-200 p-6"}>
+                    <div className={"flex flex-col justify-between md:w-64 md:h-64 rounded-3xl bg-green-200 p-6"}>
                         <h4 className={"text-2xl font-medium"}>Forest gardens</h4>
 
                         <span className={"font-medium"}>Read more</span>
                     </div>
 
-                    <div className={"flex flex-col justify-between w-64 h-64 rounded-3xl bg-gray-200 p-6"}>
+                    <div className={"flex flex-col justify-between md:w-64 md:h-64 rounded-3xl bg-gray-200 p-6"}>
                         <h4 className={"text-2xl font-medium whitespace-nowrap truncate"}>Become a volunteer</h4>
 
                         <span className={"font-medium"}>Read more</span>
