@@ -41,24 +41,27 @@ export default function Home() {
                 </div>
 
                 <div className={"flex bg-green-300 w-48 h-64 rounded-3xl justify-center items-end py-4 px-6"}>
-                    <p className={"font-medium text-lg text-center"}>Share with us your results</p>
+                    <p className={"font-medium text-lg text-center leading-5"}>Share with us your results</p>
                 </div>
 
-                <div className={"bg-green-300 w-64 h-48 rounded-3xl"}>
-                    <p>Donate and help the environment</p>
+                <div className={"flex bg-green-300 w-64 h-48 rounded-3xl justify-center items-end py-4 px-6"}>
+                    <p className={"font-medium text-lg text-center leading-5"}>Donate and help the environment</p>
                 </div>
 
-                <div className={"bg-green-300 w-32 h-32 rounded-3xl"}>
-                    <p>International environment day</p>
+                <div className={"flex bg-green-300 w-32 h-32 rounded-3xl justify-center items-center"}>
+                    <p className={"text-xs font-medium text-center"}>International environment day</p>
                 </div>
             </section>
 
-            <section className={"flex flex-row"}>
-                <p>Green the planet</p>
-                <p>Green the planet</p>
-                <p>Green the planet</p>
-                <p>Green the planet</p>
-                <p>Green the planet</p>
+            <section className={"flex flex-row flex-nowrap gap-8 bg-green-100 py-2"}>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
+                <span className={"text-green-950 font-medium"}>Green The Planet</span>
             </section>
 
             <section className={"flex flex-row"}>
