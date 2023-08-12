@@ -5,7 +5,7 @@ export default function Home() {
                 <article className={"flex flex-row justify-around items-center px-8 py-6"}>
                     <span className={"flex flex-auto font-medium justify-start"}>Wasted</span>
 
-                    <div className={"hidden md:flex flex-1 flex-row gap-8"}>
+                    <div className={"hidden md:flex flex-1 flex-row gap-6"}>
                     <span
                         className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
                         Projects
@@ -20,7 +20,9 @@ export default function Home() {
                    </span>
                     </div>
 
-                    <span className={"flex flex-auto font-medium justify-end"}>Contact us</span>
+                    <div className={"flex flex-auto font-medium justify-end"}>
+                        <span className={"py-1 px-3 bg-gray-950 text-white rounded-3xl"}>Contact us</span>
+                    </div>
                 </article>
 
                 <article className={"flex justify-center items-center py-8"}>
