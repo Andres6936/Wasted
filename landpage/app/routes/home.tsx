@@ -92,20 +92,28 @@ export default function Home() {
 
             <section className={"flex flex-row flex-nowrap overflow-hidden gap-4 px-16 pb-12"}>
                 <div className={"flex flex-row w-[36rem] gap-8 h-64 rounded-3xl bg-gray-200 p-6"}>
-                    <div className={"flex flex-col"}>
-                        <h4 className={"text-3xl font-medium"}>Cleaning up the Danube</h4>
-                        <p className={"text-sm py-4 pr-32"}>Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                    <div className={"flex flex-col justify-between"}>
+                        <div>
+                            <h4 className={"text-3xl font-medium"}>Cleaning up the Danube</h4>
+                            <p className={"text-sm py-4 pr-32"}>Our team is actively working to clean up the Danube River from pollution in order to restore its natural beauty.</p>
+                        </div>
+
+                        <span className={"font-medium"}>Read more</span>
                     </div>
 
                     <div className={"flex w-80 rounded-3xl bg-green-400"}></div>
                 </div>
 
-                <div className={"flex w-64 h-64 rounded-3xl bg-green-200 p-6"}>
+                <div className={"flex flex-col justify-between w-64 h-64 rounded-3xl bg-green-200 p-6"}>
                     <h4 className={"text-2xl font-medium"}>Forest gardens</h4>
+
+                    <span className={"font-medium"}>Read more</span>
                 </div>
 
-                <div className={"flex w-64 h-64 rounded-3xl bg-gray-200 p-6"}>
+                <div className={"flex flex-col justify-between w-64 h-64 rounded-3xl bg-gray-200 p-6"}>
                     <h4 className={"text-2xl font-medium whitespace-nowrap truncate"}>Become a volunteer</h4>
+
+                    <span className={"font-medium"}>Read more</span>
                 </div>
             </section>
         </main>
