@@ -101,11 +101,11 @@ export default function Home() {
                 </div>
 
                 <div className={"flex w-64 h-64 rounded-3xl bg-green-200 p-6"}>
-                    <h4>Forest gardens</h4>
+                    <h4 className={"text-2xl font-medium"}>Forest gardens</h4>
                 </div>
 
                 <div className={"flex w-64 h-64 rounded-3xl bg-gray-200 p-6"}>
-                    <h4>Become a volunteer</h4>
+                    <h4 className={"text-2xl font-medium whitespace-nowrap truncate"}>Become a volunteer</h4>
                 </div>
             </section>
         </main>
