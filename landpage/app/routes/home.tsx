@@ -86,8 +86,8 @@ export default function Home() {
                 <button>Our Projects</button>
             </section>
 
-            <section>
-                <h2>We hold various events, campaigns and raise funds for the implementation of projects to preserve the environment</h2>
+            <section className={"flex pl-16 pr-48 py-12"}>
+                <h2 className={"text-5xl font-medium"}>We hold various events, campaigns and raise funds for the implementation of projects to preserve the environment</h2>
             </section>
 
             <section className={"flex flex-row"}>
