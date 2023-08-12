@@ -26,7 +26,7 @@ export default function Home() {
                 </article>
 
                 <article className={"flex justify-center items-center py-8"}>
-                    <h1 className={"text-center text-6xl md:text-7xl font-medium"}>Join us in the fight for the
+                    <h1 className={"text-center text-6xl md:text-7xl font-medium leading-[1.1] md:leading-none"}>Join us in the <span className={"rounded-3xl bg-green-200 px-1"}>fight</span> for the
                         environment</h1>
                 </article>
 
