@@ -18,6 +18,10 @@ export default function Home() {
                             className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
                        Campaigns
                    </span>
+                        <span
+                          className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
+                       Portal
+                   </span>
                     </div>
 
                     <div className={"flex flex-auto font-medium justify-end"}>
