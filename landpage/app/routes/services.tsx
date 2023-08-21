@@ -134,6 +134,18 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <section className={"flex flex-col container mx-auto"}>
+        <div className={"flex flex-row items-center gap-8 my-12"}>
+          <div className={"flex flex-col flex-1"}>
+            <h3 className={"text-2xl font-medium"}>Total Servicio</h3>
+            <p>La factura se genera sin IVA. Se identificará el servicio como 'GESTIÓN INTEGRAL DE RESIDUOS PELIGROSOS'</p>
+          </div>
+
+          <button className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-200"}>$80.000, Servicio</button>
+          <button className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-700 text-white font-medium"}>$120.000, Servicio Prioritario</button>
+        </div>
+      </section>
     </>
   );
 }
