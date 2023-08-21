@@ -1,8 +1,16 @@
-import React from "react";
+'use client'
+
+import React, { useState } from "react";
 import HeadNavigator from "@/components/HeadNavigator";
 import GreenPlanet from "@/components/GreenPlanet";
 
 export default function Service() {
+  const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [direction, setDirection] = useState<string>('')
+  const [typeService, setTyeService] = useState<string>('')
+  const [socialClass, setSocialClass] = useState<string>('')
+
   return (
     <>
       <section className={"flex flex-col container mx-auto"}>

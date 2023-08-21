@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={"h-full"}>
       <body>
-        <main className="h-full">
+        <main className="h-screen">
           {children}
         </main>
       </body>
