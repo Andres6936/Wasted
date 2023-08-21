@@ -1,9 +1,24 @@
 import HeadNavigator from "~/components/HeadNavigator";
 import GreenPlanet from "~/components/GreenPlanet";
+import { createService } from "~/models/services.server";
+import { Form } from "@remix-run/react";
+
+export const action = async () => {
+  const response = await createService({
+    Address: "Street Houston",
+    Email: "adan@maildrop.cc",
+    Quote: "#Quote",
+    SocialClass: 3,
+    User: "Andy"
+  })
+
+  console.log(response);
+  return null;
+}
 
 export default function Services() {
   return (
-    <>
+    <Form method={"post"}>
       <section className={"flex flex-col container mx-auto"}>
         <HeadNavigator />
 
@@ -153,15 +168,18 @@ export default function Services() {
           </div>
 
           <div className={"flex flex-col flex-1 text-center"}>
-            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$30.000 Hasta 10Kg Mes</h1>
+            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$30.000 Hasta 10Kg
+              Mes</h1>
           </div>
 
           <div className={"flex flex-col flex-1 text-center"}>
-            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$45.000 Hasta 25Kg Mes</h1>
+            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$45.000 Hasta 25Kg
+              Mes</h1>
           </div>
 
           <div className={"flex flex-col flex-1 text-center"}>
-            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$81.000 Hasta 50Kg Mes</h1>
+            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$81.000 Hasta 50Kg
+              Mes</h1>
           </div>
         </div>
       </section>
@@ -170,11 +188,17 @@ export default function Services() {
         <div className={"flex flex-row items-center gap-8 my-12"}>
           <div className={"flex flex-col flex-1"}>
             <h3 className={"text-2xl font-medium"}>Total Servicio</h3>
-            <p>La factura se genera sin IVA. Se identificará el servicio como 'GESTIÓN INTEGRAL DE RESIDUOS PELIGROSOS'</p>
+            <p>La factura se genera sin IVA. Se identificará el servicio como 'GESTIÓN INTEGRAL DE RESIDUOS
+              PELIGROSOS'</p>
           </div>
 
-          <button className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-200"}>$80.000, Servicio</button>
-          <button className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-700 text-white font-medium"}>$120.000, Servicio Prioritario</button>
+          <button className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-200"}>$80.000,
+            Servicio
+          </button>
+          <button
+            className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-700 text-white font-medium"}>$120.000,
+            Servicio Prioritario
+          </button>
         </div>
       </section>
 
@@ -185,7 +209,8 @@ export default function Services() {
 
           <div className={"flex flex-row gap-8 mt-8"}>
             <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
-              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Certificado de Existencia</h5>
+              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Certificado de
+                Existencia</h5>
             </div>
 
             <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
@@ -193,7 +218,8 @@ export default function Services() {
             </div>
 
             <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
-              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Copia Cédula Representante Legal</h5>
+              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Copia Cédula
+                Representante Legal</h5>
             </div>
           </div>
         </article>
@@ -232,10 +258,12 @@ export default function Services() {
           </div>
 
           <div className={"flex mt-4 justify-end"}>
-            <button className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>Firmar Contrato</button>
+            <button className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>
+              Firmar Contrato
+            </button>
           </div>
         </article>
       </section>
-    </>
+    </Form>
   );
 }
