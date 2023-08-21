@@ -119,9 +119,11 @@ export default async function Index() {
         </article>
 
         <article className={"flex flex-row flex-nowrap whitespace-nowrap justify-between items-center gap-8 px-8 overflow-y-hidden overflow-x-hidden py-8"}>
-          <span className={"text-8xl font-medium uppercase tracking-tighter"}>Green</span>
-          <div className={"flex bg-green-400 rounded-full min-w-[10rem] min-h-[10rem]"}></div>
-          <span className={"text-8xl font-medium uppercase tracking-tighter"}>Campaign</span>
+          <span className={"flex flex-[2] items-center justify-center text-8xl font-medium uppercase tracking-tighter"}>Green</span>
+          <div className={"flex flex-1 items-center justify-center"}>
+            <div className={"bg-green-400 rounded-full min-w-[10rem] min-h-[10rem]"}></div>
+          </div>
+          <span className={"flex flex-[2] items-center justify-center text-8xl font-medium uppercase tracking-tighter"}>Campaign</span>
         </article>
 
         <article className={"flex flex-row justify-between items-center gap-24 px-8 my-6"}>
