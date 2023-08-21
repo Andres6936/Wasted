@@ -148,7 +148,7 @@ export default function Services() {
       </section>
 
       <section className={"flex flex-col container mx-auto"}>
-        <article className={"border border-gray-500 rounded-2xl p-8 mb-12"}>
+        <article className={"border border-gray-500 rounded-2xl p-8"}>
           <h3 className={"text-2xl font-medium"}>Documentos Requeridos</h3>
           <p>Documentos requeridos para firma de contrato</p>
 
@@ -164,6 +164,44 @@ export default function Services() {
             <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
               <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Copia Cédula Representante Legal</h5>
             </div>
+          </div>
+        </article>
+      </section>
+
+      <section className={"flex flex-col container mx-auto"}>
+        <article className={"border border-gray-500 rounded-2xl my-12 p-8"}>
+          <h3 className={"text-2xl font-medium"}>Información Personal</h3>
+
+          <div className={"flex flex-row mt-8"}>
+            <div className={"flex flex-col basis-2/5"}>
+              <h5 className={"text-lg font-medium"}>Nombre Completo</h5>
+              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
+            </div>
+
+            <div className={"flex flex-row basis-3/5"}>
+              <div>
+                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+                <p>You can't change the street & direction in later use</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={"flex flex-row mt-4"}>
+            <div className={"flex flex-col basis-2/5"}>
+              <h5 className={"text-lg font-medium"}>Correo Electrónico</h5>
+              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
+            </div>
+
+            <div className={"flex flex-row basis-3/5"}>
+              <div>
+                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+                <p>You can't change the street & direction in later use</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={"flex mt-4 justify-end"}>
+            <button className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>Firmar Contrato</button>
           </div>
         </article>
       </section>
