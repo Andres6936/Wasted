@@ -1,33 +1,13 @@
-'use client'
+"use client";
 
-import React, { useState } from "react";
+import React from "react";
 import HeadNavigator from "@/components/layout/HeadNavigator";
 import GreenPlanet from "@/components/layout/GreenPlanet";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import SocialClassChoice from "@/components/services/SocialClassChoice";
-import TypeServiceChoice from "@/components/services/TypeServiceChoice";
-import AddressInput from "@/components/services/AddressInput";
 import TablePriceService from "@/components/services/TablePriceService";
 import ObligatoryDocuments from "@/components/services/ObligatoryDocuments";
+import PersonalInformation from "@/components/services/PersonalInformation";
 
 export default function Service() {
-  const [name, setName] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [direction, setDirection] = useState<string>('')
-  const [typeService, setTyeService] = useState<string>('')
-  const [socialClass, setSocialClass] = useState<string>('')
-
-  const onSignContract = async () => {
-    const supabase = createClientComponentClient()
-
-    await supabase.from('Services').insert({
-      Address: "Street Houston",
-      Email: "adan@grr.la",
-      Quote: "#Quote",
-      SocialClass: 6,
-      User: "Adan"
-    })
-  }
 
   return (
     <>
@@ -75,16 +55,6 @@ export default function Service() {
 
       <GreenPlanet />
 
-      <section className={"flex flex-col container mx-auto"}>
-        <article className={"border border-gray-500 rounded-2xl mt-12 p-8"}>
-          <h3 className={"text-2xl font-medium"}>Information Take Service</h3>
-
-          <AddressInput/>
-          <TypeServiceChoice/>
-          <SocialClassChoice/>
-        </article>
-      </section>
-
       <TablePriceService/>
 
       <section className={"flex flex-col container mx-auto"}>
@@ -107,45 +77,7 @@ export default function Service() {
 
       <ObligatoryDocuments/>
 
-      <section className={"flex flex-col container mx-auto"}>
-        <article className={"border border-gray-500 rounded-2xl my-12 p-8"}>
-          <h3 className={"text-2xl font-medium"}>Información Personal</h3>
-
-          <div className={"flex flex-row mt-8"}>
-            <div className={"flex flex-col basis-2/5"}>
-              <h5 className={"text-lg font-medium"}>Nombre Completo</h5>
-              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
-            </div>
-
-            <div className={"flex flex-row basis-3/5"}>
-              <div>
-                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
-                <p>You can't change the street & direction in later use</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={"flex flex-row mt-4"}>
-            <div className={"flex flex-col basis-2/5"}>
-              <h5 className={"text-lg font-medium"}>Correo Electrónico</h5>
-              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
-            </div>
-
-            <div className={"flex flex-row basis-3/5"}>
-              <div>
-                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
-                <p>You can't change the street & direction in later use</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={"flex mt-4 justify-end"}>
-            <button onClick={onSignContract} className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>
-              Firmar Contrato
-            </button>
-          </div>
-        </article>
-      </section>
+      <PersonalInformation/>
     </>
   )
 }
