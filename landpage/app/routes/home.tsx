@@ -1,33 +1,11 @@
+import HeadNavigator from "~/components/HeadNavigator";
+import GreenPlanet from "~/components/GreenPlanet";
+
 export default function Home() {
     return (
         <>
             <section className={"flex flex-col container mx-auto"}>
-                <article className={"flex flex-row justify-around items-center px-8 py-6"}>
-                    <span className={"flex flex-auto font-medium justify-start"}>Wasted</span>
-
-                    <div className={"hidden md:flex flex-1 flex-row gap-6"}>
-                    <span
-                        className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
-                        Projects
-                    </span>
-                        <span
-                            className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
-                        Services
-                    </span>
-                        <span
-                            className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
-                       Campaigns
-                   </span>
-                        <span
-                          className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
-                       Portal
-                   </span>
-                    </div>
-
-                    <div className={"flex flex-auto font-medium justify-end"}>
-                        <span className={"py-1 px-3 bg-gray-950 text-white rounded-3xl"}>Contact us</span>
-                    </div>
-                </article>
+                <HeadNavigator/>
 
                 <article className={"flex justify-center items-center py-8"}>
                     <h1 className={"text-center text-6xl md:text-7xl font-medium leading-[1.1] md:leading-none"}>Join us in the <span className={"rounded-3xl bg-green-200 px-1"}>fight</span> for the
@@ -67,25 +45,7 @@ export default function Home() {
                 </article>
             </section>
 
-            <section className={"flex flex-row whitespace-nowrap overflow-hidden flex-nowrap gap-8 bg-green-100 py-2 px-2"}>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-                <span className={"text-green-950 font-medium"}>Green The Planet</span>
-            </section>
+            <GreenPlanet/>
 
             <section className={"flex flex-col container mx-auto"}>
                 <article className={"flex flex-col md:flex-row justify-between gap-24 items-start px-8 py-12"}>
