@@ -8,7 +8,7 @@ import SocialClassChoice from "@/components/services/SocialClassChoice";
 import TypeServiceChoice from "@/components/services/TypeServiceChoice";
 import AddressInput from "@/components/services/AddressInput";
 import TablePriceService from "@/components/services/TablePriceService";
-import RequeridDocuments from "@/components/services/RequeridDocuments";
+import ObligatoryDocuments from "@/components/services/ObligatoryDocuments";
 
 export default function Service() {
   const [name, setName] = useState<string>('')
@@ -105,7 +105,7 @@ export default function Service() {
         </div>
       </section>
 
-      <RequeridDocuments/>
+      <ObligatoryDocuments/>
 
       <section className={"flex flex-col container mx-auto"}>
         <article className={"border border-gray-500 rounded-2xl my-12 p-8"}>
