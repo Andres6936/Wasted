@@ -1,24 +1,43 @@
 import HeadNavigator from "~/components/HeadNavigator";
 import GreenPlanet from "~/components/GreenPlanet";
 import { createService } from "~/models/services.server";
-import { Form } from "@remix-run/react";
+import { useFetcher } from "@remix-run/react";
+import { ActionArgs, ActionFunction } from "@remix-run/node";
 
-export const action = async () => {
+export const action: ActionFunction = async ({ request }: ActionArgs) => {
+  console.log(await request.text());
+
   const response = await createService({
     Address: "Street Houston",
     Email: "adan@maildrop.cc",
     Quote: "#Quote",
     SocialClass: 3,
     User: "Andy"
-  })
+  });
 
   console.log(response);
   return null;
-}
+};
 
 export default function Services() {
+  const fetcher = useFetcher();
+
+  const onCreateService = () => {
+    fetcher.submit({
+        Address: "Street Houston",
+        Email: "adan@maildrop.cc",
+        Quote: "#Quote",
+        SocialClass: 3,
+        User: "Andy"
+      },
+      {
+        method: "POST",
+        encType: "application/json"
+      });
+  };
+
   return (
-    <Form method={"post"}>
+    <>
       <section className={"flex flex-col container mx-auto"}>
         <HeadNavigator />
 
@@ -258,12 +277,12 @@ export default function Services() {
           </div>
 
           <div className={"flex mt-4 justify-end"}>
-            <button className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>
+            <button onClick={onCreateService} className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>
               Firmar Contrato
             </button>
           </div>
         </article>
       </section>
-    </Form>
+    </>
   );
 }
