@@ -46,6 +46,54 @@ export default function Services() {
       </section>
 
       <GreenPlanet/>
+
+      <section className={"flex flex-col container mx-auto"}>
+        <article className={"border border-gray-500 rounded-2xl mt-12 p-8"}>
+          <h3 className={"text-2xl font-medium"}>Information Take Service</h3>
+
+          <div className={"flex flex-row mt-8"}>
+            <div className={"flex flex-col basis-2/5"}>
+              <h5 className={"text-lg font-medium"}>Street & Direction</h5>
+              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
+            </div>
+
+            <div className={"flex flex-row basis-3/5"}>
+              <div>
+                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+                <p>You can't change the street & direction in later use</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={"flex flex-row mt-8"}>
+            <div className={"flex flex-col basis-2/5"}>
+              <h5 className={"text-lg font-medium"}>Type of Service</h5>
+              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
+            </div>
+
+            <div className={"flex flex-row basis-3/5"}>
+              <div>
+                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+                <p>You can't change the street & direction in later use</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={"flex flex-row mt-8"}>
+            <div className={"flex flex-col basis-2/5"}>
+              <h5 className={"text-lg font-medium"}>Social Class</h5>
+              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
+            </div>
+
+            <div className={"flex flex-row basis-3/5"}>
+              <div>
+                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+                <p>You can't change the street & direction in later use</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
     </>
   )
 }
