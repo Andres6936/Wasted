@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from "react";
-import HeadNavigator from "@/components/HeadNavigator";
-import GreenPlanet from "@/components/GreenPlanet";
+import HeadNavigator from "@/components/layout/HeadNavigator";
+import GreenPlanet from "@/components/layout/GreenPlanet";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import SocialClassChoice from "@/components/services/SocialClassChoice";
 import TypeServiceChoice from "@/components/services/TypeServiceChoice";

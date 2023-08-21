@@ -1,8 +1,8 @@
 import React from "react";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import HeadNavigator from "@/components/HeadNavigator";
-import GreenPlanet from "@/components/GreenPlanet";
+import HeadNavigator from "@/components/layout/HeadNavigator";
+import GreenPlanet from "@/components/layout/GreenPlanet";
 
 export const dynamic = 'force-dynamic'
 
