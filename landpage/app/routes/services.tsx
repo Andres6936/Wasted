@@ -146,6 +146,26 @@ export default function Services() {
           <button className={"flex flex-1 items-center justify-center p-2 rounded-2xl text-xl bg-green-700 text-white font-medium"}>$120.000, Servicio Prioritario</button>
         </div>
       </section>
+
+      <section className={"flex flex-col container mx-auto"}>
+        <article className={"border border-gray-500 rounded-2xl p-8 mb-12"}>
+          <h3 className={"text-2xl font-medium"}>Documentos Requeridos</h3>
+
+          <div className={"flex flex-row gap-8 mt-8"}>
+            <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
+              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Certificado de Existencia</h5>
+            </div>
+
+            <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
+              <h5 className={"text-3xl text-white font-medium p-4 tracking-tighter"}>RUT</h5>
+            </div>
+
+            <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
+              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Copia Cédula Representante Legal</h5>
+            </div>
+          </div>
+        </article>
+      </section>
     </>
   );
 }
