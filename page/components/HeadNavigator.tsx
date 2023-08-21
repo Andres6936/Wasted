@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function HeadNavigator() {
   return (
     <article className={"flex flex-row justify-around items-center px-8 py-6"}>
-      <Link href={"/home"} className={"flex flex-auto font-medium justify-start"}>Wasted</Link>
+      <Link href={"/"} className={"flex flex-auto font-medium justify-start"}>Wasted</Link>
 
       <div className={"hidden md:flex flex-1 flex-row gap-6"}>
-        <Link href={"/home"}
+        <Link href={"/"}
               className={"flex flex-shrink flex-grow basis-0 rounded-3xl bg-gray-200 py-1 px-3 justify-center text-center"}>
           Projects
         </Link>
