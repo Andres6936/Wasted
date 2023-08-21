@@ -66,7 +66,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className={"flex flex-row mt-8"}>
+          <div className={"flex flex-row mt-4"}>
             <div className={"flex flex-col basis-2/5"}>
               <h5 className={"text-lg font-medium"}>Type of Service</h5>
               <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
@@ -80,7 +80,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className={"flex flex-row mt-8"}>
+          <div className={"flex flex-row mt-4"}>
             <div className={"flex flex-col basis-2/5"}>
               <h5 className={"text-lg font-medium"}>Social Class</h5>
               <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
@@ -150,6 +150,7 @@ export default function Services() {
       <section className={"flex flex-col container mx-auto"}>
         <article className={"border border-gray-500 rounded-2xl p-8 mb-12"}>
           <h3 className={"text-2xl font-medium"}>Documentos Requeridos</h3>
+          <p>Documentos requeridos para firma de contrato</p>
 
           <div className={"flex flex-row gap-8 mt-8"}>
             <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
