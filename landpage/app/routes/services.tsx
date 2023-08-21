@@ -97,7 +97,7 @@ export default function Services() {
       </section>
 
       <section className={"flex flex-col container mx-auto"}>
-        <div className={"flex flex-row mt-12 px-8 py-4 bg-green-200 uppercase"}>
+        <div className={"flex flex-row mt-12 px-8 py-4 bg-green-200 uppercase rounded-t-2xl"}>
           <h3 className={"flex flex-1 text-lg font-medium"}>Nombre Técnico Asignado</h3>
           <h3 className={"flex flex-1 text-lg font-medium text-center items-center justify-center"}>
             Manejo Ambiental</h3>
@@ -109,7 +109,7 @@ export default function Services() {
             Frecuencia 4 Vez al Mes</h3>
         </div>
 
-        <div className={"flex flex-row bg-green-600 text-white px-8 py-4"}>
+        <div className={"flex flex-row bg-green-600 text-white px-8 py-4 rounded-b-2xl"}>
           <div className={"flex flex-col flex-1"}>
             <h2 className={"flex flex-1 font-medium text-2xl"}>Biosanitarios</h2>
             <h2 className={"flex flex-1 font-medium text-2xl"}>Anatomopatológicos</h2>
