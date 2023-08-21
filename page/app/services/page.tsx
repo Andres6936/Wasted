@@ -3,6 +3,12 @@
 import React, { useState } from "react";
 import HeadNavigator from "@/components/HeadNavigator";
 import GreenPlanet from "@/components/GreenPlanet";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import SocialClassChoice from "@/components/services/SocialClassChoice";
+import TypeServiceChoice from "@/components/services/TypeServiceChoice";
+import AddressInput from "@/components/services/AddressInput";
+import TablePriceService from "@/components/services/TablePriceService";
+import RequeridDocuments from "@/components/services/RequeridDocuments";
 
 export default function Service() {
   const [name, setName] = useState<string>('')
@@ -10,6 +16,18 @@ export default function Service() {
   const [direction, setDirection] = useState<string>('')
   const [typeService, setTyeService] = useState<string>('')
   const [socialClass, setSocialClass] = useState<string>('')
+
+  const onSignContract = async () => {
+    const supabase = createClientComponentClient()
+
+    await supabase.from('Services').insert({
+      Address: "Street Houston",
+      Email: "adan@grr.la",
+      Quote: "#Quote",
+      SocialClass: 6,
+      User: "Adan"
+    })
+  }
 
   return (
     <>
@@ -61,122 +79,13 @@ export default function Service() {
         <article className={"border border-gray-500 rounded-2xl mt-12 p-8"}>
           <h3 className={"text-2xl font-medium"}>Information Take Service</h3>
 
-          <div className={"flex flex-row mt-8"}>
-            <div className={"flex flex-col basis-2/5"}>
-              <h5 className={"text-lg font-medium"}>Street & Direction</h5>
-              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
-            </div>
-
-            <div className={"flex flex-row basis-3/5"}>
-              <div>
-                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
-                <p>You can't change the street & direction in later use</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={"flex flex-row mt-4"}>
-            <div className={"flex flex-col basis-2/5"}>
-              <h5 className={"text-lg font-medium"}>Type of Service</h5>
-              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
-            </div>
-
-            <div className={"flex flex-row basis-3/5"}>
-              <div>
-                <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
-                <p>You can't change the street & direction in later use</p>
-              </div>
-            </div>
-          </div>
-
-          <div className={"flex flex-row mt-4"}>
-            <div className={"flex flex-col basis-2/5"}>
-              <h5 className={"text-lg font-medium"}>Social Class</h5>
-              <p className={"text-md"}>Some instructions lorem ipsum is simply dummy text of printing.</p>
-            </div>
-
-            <div className={"flex flex-row gap-4 basis-3/5"}>
-              <div>
-                <div className={"flex justify-center items-center w-[3.5rem] h-[3.5rem] bg-green-600 rounded-xl"}>
-                  <span className={"text-3xl text-white font-medium"}>1</span>
-                </div>
-              </div>
-
-              <div>
-                <div className={"flex justify-center items-center w-[3.5rem] h-[3.5rem] bg-green-600 rounded-xl"}>
-                  <span className={"text-3xl text-white font-medium"}>2</span>
-                </div>
-              </div>
-
-              <div>
-                <div className={"flex justify-center items-center w-[3.5rem] h-[3.5rem] bg-green-600 rounded-xl"}>
-                  <span className={"text-3xl text-white font-medium"}>3</span>
-                </div>
-              </div>
-
-              <div>
-                <div className={"flex justify-center items-center w-[3.5rem] h-[3.5rem] bg-green-600 rounded-xl"}>
-                  <span className={"text-3xl text-white font-medium"}>4</span>
-                </div>
-              </div>
-
-              <div>
-                <div className={"flex justify-center items-center w-[3.5rem] h-[3.5rem] bg-green-600 rounded-xl"}>
-                  <span className={"text-3xl text-white font-medium"}>5</span>
-                </div>
-              </div>
-
-              <div>
-                <div className={"flex justify-center items-center w-[3.5rem] h-[3.5rem] bg-green-600 rounded-xl"}>
-                  <span className={"text-3xl text-white font-medium"}>6</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <AddressInput/>
+          <TypeServiceChoice/>
+          <SocialClassChoice/>
         </article>
       </section>
 
-      <section className={"flex flex-col container mx-auto"}>
-        <div className={"flex flex-row mt-12 px-8 py-4 bg-green-200 uppercase rounded-t-2xl"}>
-          <h3 className={"flex flex-1 text-lg font-medium"}>Nombre Técnico Asignado</h3>
-          <h3 className={"flex flex-1 text-lg font-medium text-center items-center justify-center"}>
-            Manejo Ambiental</h3>
-          <h3 className={"flex flex-1 text-lg font-medium text-center items-center justify-center"}>
-            Frecuencia 1 Vez al Mes</h3>
-          <h3 className={"flex flex-1 text-lg font-medium text-center items-center justify-center"}>
-            Frecuencia 2 Vez al Mes</h3>
-          <h3 className={"flex flex-1 text-lg font-medium text-center items-center justify-center"}>
-            Frecuencia 4 Vez al Mes</h3>
-        </div>
-
-        <div className={"flex flex-row bg-green-600 text-white px-8 py-4 rounded-b-2xl"}>
-          <div className={"flex flex-col flex-1"}>
-            <h2 className={"flex flex-1 font-medium text-2xl"}>Biosanitarios</h2>
-            <h2 className={"flex flex-1 font-medium text-2xl"}>Anatomopatológicos</h2>
-            <h2 className={"flex flex-1 font-medium text-2xl"}>Cortopunzante</h2>
-          </div>
-
-          <div className={"flex flex-col flex-1 text-center"}>
-            <h2 className={"flex flex-1 items-center justify-center font-medium text-2xl"}>Desactivación</h2>
-            <h2 className={"flex flex-[2] items-center justify-center font-medium text-2xl"}>Incineración</h2>
-          </div>
-
-          <div className={"flex flex-col flex-1 text-center"}>
-            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$30.000 Hasta 10Kg
-              Mes</h1>
-          </div>
-
-          <div className={"flex flex-col flex-1 text-center"}>
-            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$45.000 Hasta 25Kg
-              Mes</h1>
-          </div>
-
-          <div className={"flex flex-col flex-1 text-center"}>
-            <h1 className={"flex flex-1 items-center justify-center text-4xl font-bold px-14"}>$81.000 Hasta 50Kg
-              Mes</h1>
-          </div>
-        </div>
-      </section>
+      <TablePriceService/>
 
       <section className={"flex flex-col container mx-auto"}>
         <div className={"flex flex-row items-center gap-8 my-12"}>
@@ -196,28 +105,7 @@ export default function Service() {
         </div>
       </section>
 
-      <section className={"flex flex-col container mx-auto"}>
-        <article className={"border border-gray-500 rounded-2xl p-8"}>
-          <h3 className={"text-2xl font-medium"}>Documentos Requeridos</h3>
-          <p>Documentos requeridos para firma de contrato</p>
-
-          <div className={"flex flex-row gap-8 mt-8"}>
-            <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
-              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Certificado de
-                Existencia</h5>
-            </div>
-
-            <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
-              <h5 className={"text-3xl text-white font-medium p-4 tracking-tighter"}>RUT</h5>
-            </div>
-
-            <div className={"w-[12rem] h-[12rem] bg-green-500 rounded-2xl"}>
-              <h5 className={"text-2xl text-white font-medium p-4 tracking-tighter leading-6"}>Copia Cédula
-                Representante Legal</h5>
-            </div>
-          </div>
-        </article>
-      </section>
+      <RequeridDocuments/>
 
       <section className={"flex flex-col container mx-auto"}>
         <article className={"border border-gray-500 rounded-2xl my-12 p-8"}>
@@ -252,7 +140,7 @@ export default function Service() {
           </div>
 
           <div className={"flex mt-4 justify-end"}>
-            <button className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>
+            <button onClick={onSignContract} className={"py-2 px-6 rounded-2xl bg-green-500 text-white font-medium"}>
               Firmar Contrato
             </button>
           </div>
