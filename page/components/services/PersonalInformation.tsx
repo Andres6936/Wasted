@@ -5,23 +5,23 @@ import React, { useState } from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
 export default function() {
-  const [name, setName] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [direction, setDirection] = useState<string>('')
-  const [typeService, setTyeService] = useState<string>('')
-  const [socialClass, setSocialClass] = useState<string>('')
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [numberPhone, setNumberPhone] = useState<string>("");
+  const [address, setAddress] = useState<string>("");
+  const [observation, setObservation] = useState<string>("");
 
   const onSignContract = async () => {
-    const supabase = createClientComponentClient()
+    const supabase = createClientComponentClient();
 
-    await supabase.from('Services').insert({
-      Address: "Street Houston",
-      Email: "adan@grr.la",
-      Quote: "#Quote",
-      SocialClass: 6,
-      User: "Adan"
-    })
-  }
+    await supabase.from("Quotes").insert({
+      Name: name,
+      Email: email,
+      NumberPhone: numberPhone,
+      Address: address,
+      Observation: observation
+    });
+  };
 
   return (
     <section className={"flex flex-col container mx-auto"}>
@@ -36,7 +36,8 @@ export default function() {
 
           <div className={"flex flex-row basis-3/5"}>
             <div>
-              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" value={name}
+                     onChange={({ target }) => setName(target.value)} />
               <p>You can't change the street & direction in later use</p>
             </div>
           </div>
@@ -50,7 +51,8 @@ export default function() {
 
           <div className={"flex flex-row basis-3/5"}>
             <div>
-              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" value={email}
+                     onChange={({ target }) => setEmail(target.value)} />
               <p>You can't change the street & direction in later use</p>
             </div>
           </div>
@@ -64,7 +66,8 @@ export default function() {
 
           <div className={"flex flex-row basis-3/5"}>
             <div>
-              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" value={numberPhone}
+                     onChange={({ target }) => setNumberPhone(target.value)} />
               <p>You can't change the street & direction in later use</p>
             </div>
           </div>
@@ -98,9 +101,9 @@ export default function() {
           </div>
         </div>
 
-        <AddressInput/>
+        <AddressInput value={address} onChange={(address: string) => setAddress(address)} />
 
-        <TypeServiceChoice/>
+        <TypeServiceChoice />
 
         <div className={"flex flex-row mt-4"}>
           <div className={"flex flex-col basis-2/5"}>
@@ -138,20 +141,22 @@ export default function() {
 
           <div className={"flex flex-row basis-3/5"}>
             <div>
-              <input className={"border border-gray-500 rounded-3xl w-[24rem]"} type="text" />
+              <textarea className={"border border-gray-500 rounded-xl w-[24rem]"} value={observation}
+                        onChange={({ target }) => setObservation(target.value)} />
               <p>You can't change the street & direction in later use</p>
             </div>
           </div>
         </div>
 
-        <SocialClassChoice/>
+        <SocialClassChoice />
 
         <div className={"flex mt-4 justify-end"}>
-          <button onClick={onSignContract} className={"py-2 px-6 rounded-2xl w-[16rem] bg-green-500 text-white font-medium"}>
+          <button onClick={onSignContract}
+                  className={"py-2 px-6 rounded-2xl w-[16rem] bg-green-500 text-white font-medium"}>
             Enviar
           </button>
         </div>
       </article>
     </section>
-  )
+  );
 }
