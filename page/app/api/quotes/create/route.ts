@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import { PlanType } from "@/app/states/PlanType";
 
 export async function POST(request: Request) {
   const create = await request.json();
@@ -14,7 +15,7 @@ export async function POST(request: Request) {
     "Observation": create.Observation,
     "Value": create.Value,
     // Is needed to validate the body with the defined in the enum
-    "Plan": PlanType[create.Plan].name
+    "Plan": create.Plan as PlanType,
   }).select()
 
   if (response.data?.length == 1) {
