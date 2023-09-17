@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import { v4 as uuid4 } from 'uuid';
 
 export async function POST(request: Request) {
   const documents = await request.json();
@@ -12,7 +13,32 @@ export async function POST(request: Request) {
     .select();
 
   if (responseCount.count === 1) {
-    // TODO: Add
+    for (let document of documents.Documents) {
+      const path = uuid4() + '.' + document.MIME
+      const responseUpload = await supabase.storage.from('Documents')
+        .upload( path, Buffer.from(document.Base64, 'base64'))
+      if (responseUpload.error === null) {
+        const responseInsert = await supabase.from('Documents')
+          .insert({
+            Process: documents.Process,
+            Type: document.Type,
+            URL: path,
+          })
+        if (responseInsert.data != 1) {
+          return NextResponse.json({
+            isBase64Encoded: false,
+            statusCode: 403,
+            body: 'Document not register in database'
+          });
+        }
+      } else {
+        return NextResponse.json({
+          isBase64Encoded: false,
+          statusCode: 403,
+          body: 'Document cannot upload to storage'
+        });
+      }
+    }
   } else {
     return NextResponse.json({
       isBase64Encoded: false,
