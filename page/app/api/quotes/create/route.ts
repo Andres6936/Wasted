@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const create = await request.json();
   const supabase = createRouteHandlerClient({ cookies });
 
-  const response = await supabase.from("").insert({
+  const response = await supabase.from("Quotes").insert({
     "Name": create.Name,
     "Email": create.Email,
     "NumberPhone": create.NumberPhone,
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     "Observation": create.Observation,
     "Value": create.Value,
     // Is needed to validate the body with the defined in the enum
-    "Plan": create.Plan as PlanType,
+    "Plan": create.Plan,
   }).select()
 
   if (response.data?.length == 1) {

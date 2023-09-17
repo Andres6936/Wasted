@@ -24,7 +24,7 @@ export async function POST(request: Request) {
             Type: document.Type,
             URL: path,
           })
-        if (responseInsert.data != 1) {
+        if (responseInsert.status != 201) {
           return NextResponse.json({
             isBase64Encoded: false,
             statusCode: 403,
@@ -39,6 +39,12 @@ export async function POST(request: Request) {
         });
       }
     }
+
+    return NextResponse.json({
+      isBase64Encoded: false,
+      statusCode: 200,
+      body: 'Successful'
+    });
   } else {
     return NextResponse.json({
       isBase64Encoded: false,
